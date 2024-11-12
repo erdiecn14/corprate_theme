@@ -1,6 +1,6 @@
 # corprate_theme
 
-#### orprate_theme was developed for Catalyst Marketing and is their proprietary theme.
+#### corprate_theme was developed for Catalyst Marketing and is their proprietary theme.
 
 ## Installation
 
