@@ -1,0 +1,19 @@
+.copy-frame-wrapper {
+  $box-shadow-size: 20px;
+  padding-top: var(--PAD2);
+  padding-bottom: calc(var(--PAD2) + #{$box-shadow-size});
+  
+  &:last-child {
+    // compensate for section bottom padding
+    margin-bottom: calc(var(--PAD2) * -1);
+  }
+}
+
+.copy-frame {
+  @extend .bg-w;
+  $shadow-width: 20px;
+  border-radius: var(--round);
+  padding: var(--PAD-1);
+  box-shadow: (-1 * $shadow-width) $shadow-width 0 0 var(--copy-frame-shadow-color, #{$color-1});
+  // max-width: max(400px, calc(100% - #{$shadow-width}));
+}

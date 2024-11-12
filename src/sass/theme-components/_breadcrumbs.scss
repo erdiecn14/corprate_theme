@@ -1,0 +1,28 @@
+nav.breadcrumbs {
+  --list-case: normal;
+  --list-font-weight: bold;
+  --list-font-size: var(--FS1);
+  --list-color: #{$color-2};
+  --link-font-weight: var(--list-font-weight);
+  --link-color: #{$color-1};
+  --link-decor: underline;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: .5rem;
+    padding: 1em 0 0 0;
+  }
+  
+  li:not(:last-child) {
+    &:after {
+      content: ' > ';
+      color: $color-1;
+      font-weight: bold;
+      white-space: pre-wrap;
+    }
+  }
+  
+}

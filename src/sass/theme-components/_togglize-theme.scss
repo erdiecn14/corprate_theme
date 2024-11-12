@@ -1,0 +1,109 @@
+/* These styles are used across all the togglized code */
+%togglize-container {
+  $toggle-gap: 1rem;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  .expandable {
+    // padding-top: $toggle-gap;
+    // padding-bottom: $toggle-gap;
+    margin-top: 0;
+    ul,
+    ol {
+      padding: 0;
+    }
+    &[hidden] {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+  
+  > %headings {
+    margin: 0;
+    line-height: 1;
+  }
+
+  > %headings:not(:first-of-type) {
+    margin-top: .5rem;
+  }
+  
+  .togglize-button {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    color: $color-1;
+    font-family: var(--FONT-SANS-STACK-1);
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1;
+    padding: $toggle-gap 1rem $toggle-gap 0;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    vertical-align: text-top;
+    align-items: center;
+    text-transform: uppercase;
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 5px;
+      border-radius: var(--round);
+      background: $color-2;
+      position: absolute;
+      bottom: 0;
+    }
+    
+    &:before {
+      content: '';
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 5px;
+      border-radius: var(--round);
+      background: $color-2;
+      position: absolute;
+    }
+    
+    @include mx-tablet {
+      text-align: left;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &:focus svg.expand-icon--plus-minus {
+      outline: solid $color-1;
+      outline-offset: 4px;
+      outline-width: 3px; 
+    }
+    
+  }
+  
+  .togglize-button svg.expand-icon--plus-minus {
+    width: 1.5rem;
+    min-width: 1.5rem;
+    margin-left: 1rem;
+    fill: $color-1;
+  }
+
+  .togglize-button[aria-expanded="true"] svg.expand-icon--plus-minus .vert {
+    display: none;
+  }
+}
+
+.togglize-me,
+.accordionize-me {
+  @extend %togglize-container;
+}
+
+
+

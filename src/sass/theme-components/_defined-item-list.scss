@@ -1,0 +1,91 @@
+.defined-item-list {
+  --list-case: normal;
+  list-style: none;
+  padding: 0;
+}
+ 
+.defined-item-list  li + li {
+  margin-top: var(--PAD-4);
+}
+
+.defined-item-list [data-item-color="1"] {
+  --heading-fill: #{$color-2};
+}
+.defined-item-list [data-item-color="2"] {
+  --heading-fill: #{$color-3};
+}
+.defined-item-list [data-item-color="3"] {
+  --heading-fill: #{$color-4};
+}
+.defined-item-list [data-item-color="4"] {
+  --heading-fill: #{$color-5};
+}
+.defined-item-list [data-item-color="5"] {
+  --heading-fill: #{$color-1};
+}
+.defined-item-list [data-item-color="6"] {
+  --heading-fill: #{$color-6};
+}
+.defined-item-list [data-item-color="7"] {
+  --heading-fill: #{$color-7};
+}
+
+// .defined-item-list > li:nth-child(1n) {
+//   --heading-fill: #{$color-3};
+// }
+// .defined-item-list > li:nth-child(3n) {
+//   --heading-fill: #{$color-5};
+// }
+// .defined-item-list > li:nth-child(2n) {
+//   --heading-fill: #{$color-2};
+// }
+// .defined-item-list > li:nth-child(4n) {
+//   --heading-fill: #{$color-1};
+// }
+
+figure.defined-item {
+  @extend .columns;
+  --all-heading-font-size: 1.2rem;
+  --container-threshold: #{$remq-lg};
+  --col-gutter: clamp(0px, 4%, 2rem);
+}
+
+figure.defined-item %headings:first-child {
+  --heading-color: white;
+  padding: var(--PAD-2);
+  border-radius: 5px;
+  background-color: var(--heading-fill, #{$color-3});
+  max-width: none;
+}
+
+.defined-item__heading {
+  text-shadow: 0 0 7px black;
+}
+
+figcaption.definition {
+  --col-ratio: 3;
+  position: relative;
+  padding: var(--PAD-3) 0 var(--PAD-2);
+  margin-top: initial;
+  
+  @include mx-desktop {
+    padding-left: var(--PAD-2);
+    padding-right: var(--PAD-2);
+  }
+}
+
+figcaption.definition > * + * {
+  margin-top: var(--PAD-7);
+}
+
+figcaption.definition:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: var(--heading-fill, #{$color-3});
+  border-radius: var(--round);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

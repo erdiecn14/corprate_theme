@@ -1,0 +1,38 @@
+.arrow-link {
+  font-size: var(--FS1);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  width: fit-content;
+  position: relative;
+  --arrow-link-underline-color: var(--COLOR-3);
+  &:hover {
+    --arrow-link-underline-color: var(--COLOR-1);
+  } 
+  &:hover svg {
+    transform: translateX(-10px);
+  }
+}
+
+.arrow-link svg {
+  width: 2rem;
+  fill: var(--COLOR-3);
+  transition: ease-in-out .2s;
+}
+
+.arrow-link__text {
+  position: relative;
+  margin-top: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 3px;
+    border-radius: var(--round);
+    background: var(--arrow-link-underline-color);
+    position: absolute;
+    width: 100%;
+    bottom: -.5rem;
+    left: 0;
+  }
+}

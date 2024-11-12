@@ -1,0 +1,33 @@
+.portfolio-section{
+    --grid-item-min-width: 25rem;
+}
+
+.asset-post-list__item{
+    background-color: var(--COLOR-8);
+    border-bottom: solid 2px var(--COLOR-3);
+}
+
+.asset-image{
+    aspect-ratio: 4/3;
+}
+
+.asset-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.asset-info{
+    margin-top: 0;
+    text-align: center;
+    padding: var(--PAD-5) 0;
+}
+
+.asset-info h3{
+    font-size: var(--FS1);
+    letter-spacing: .1ch;
+}
+
+.asset-info p{
+    // font-size: var(--FS0);
+}

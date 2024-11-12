@@ -1,0 +1,355 @@
+:root {
+  --COLOR-1: #3b3771;
+  --COLOR-2: #ed8945;
+  --COLOR-3: #e85021;
+  --COLOR-4: #49677b;
+  --COLOR-5: #000000;
+  --COLOR-6: #ffffff;
+  --COLOR-7: #28292d;
+  --COLOR-8: #f4f4f2;
+  --handle-color: var(--COLOR-1);
+  --add-more-button-bg: var(--COLOR-1);
+  --add-more-button-color: white;
+}
+
+/* ACF Controls Always Visible */
+.acf-flexible-content .layout .acf-fc-layout-controls .acf-icon.-plus, 
+.acf-flexible-content .layout .acf-fc-layout-controls .acf-icon.-minus, 
+.acf-flexible-content .layout .acf-fc-layout-controls .acf-icon.-duplicate {
+  visibility: visible !important;
+}
+
+#post-body-content .acf-fields > .acf-field {
+  padding: 6px;
+}
+
+.acf-field[data-live-field-bg='bg-w'],
+.bg-w {
+  background-color: white !important;
+}
+
+.acf-field[data-live-field-bg='bg-1'],
+.bg-1 {
+  background-color: var(--COLOR-1) !important;
+  color: white;
+}
+
+.acf-field[data-live-field-bg='bg-2'],
+.bg-2 {
+  background-color: var(--COLOR-2) !important;
+  color: black;
+}
+
+.acf-field[data-live-field-bg='bg-3'],
+.bg-3 {
+  background-color: var(--COLOR-3) !important;
+  color: black;
+}
+
+.acf-field[data-live-field-bg='bg-4'],
+.bg-4 {
+  background-color: var(--COLOR-4) !important;
+  color: black;
+}
+
+.acf-field[data-live-field-bg='bg-5'],
+.bg-5 {
+  background-color: var(--COLOR-5) !important;
+  color: white;
+}
+
+.acf-field[data-live-field-bg='bg-6'],
+.bg-6 {
+  background-color: var(--COLOR-6) !important;
+  color: black;
+}
+
+.acf-field[data-live-field-bg='bg-7'],
+.bg-7 {
+  background-color: var(--COLOR-7) !important;
+  color: black;
+}
+
+.acf-field[data-live-field-bg='bg-8'],
+.bg-8 {
+  background-color: var(--COLOR-8) !important;
+  color: black;
+}
+
+.acf-field[data-live-field-bg='bg-9'],
+.bg-9 {
+  background-color: var(--COLOR-9) !important;
+  color: white;
+}
+
+.acf-postbox > .acf-fields > .acf-field-group > .acf-input > .acf-fields > .acf-field-group {
+  background: var(--COLOR-1) !important;
+}
+
+.acf-postbox > .acf-fields > .acf-field-group > .acf-input > .acf-fields > .acf-field-group:not(:first-of-type) {
+  margin-top: .2rem;
+}
+
+.acf-postbox > .acf-fields > .acf-field-group > .acf-input > .acf-fields > .acf-field-group > .acf-label {
+  color: white !important;
+  font-weight: bold;
+  font-size: 1rem !important;
+}
+
+.acf-fc-layout-handle {
+  background: var(--handle-color) !important;
+  color: white !important;
+  font-weight: bold;
+  font-size: 1rem !important;
+}
+
+div[data-name="section_collection"] {
+  --add-more-button-bg: var(--COLOR-1);
+  --add-more-button-color: white;
+}
+
+div[data-name="layout_collection"] {
+  --add-more-button-bg: #424242;
+  --add-more-button-color: white;
+}
+
+div[data-name="component_collection"] {
+  --add-more-button-bg: var(--COLOR-2);
+  --add-more-button-color: white;
+}
+
+div[data-name="list_items"] {
+  --add-more-button-bg: var(--COLOR-1);
+  --add-more-button-color: white;
+}
+
+div[data-layout^="section"] {
+  --handle-color: var(--COLOR-1);
+}
+
+div[data-layout^="layout"] {
+  /* --handle-color: var(--COLOR-1); */
+	--handle-color: #424242;
+}
+
+div[data-layout^="component"] {
+  --handle-color: var(--COLOR-2);
+}
+
+div[data-layout=section_basic] > .acf-fields > .acf-field[data-name=bg_color_numbers] {
+  width: 60%;
+  min-width: 425px;
+  float: left;
+  clear: none;
+}
+
+.acf-field[data-name=section_type] {
+  width: 40%;
+  float: left;
+  clear: none;
+}
+
+div[data-layout="layout_columns"] > .acf-fields > .acf-field[data-name=bg_color_numbers] {
+  width: 50%;
+  min-width: 425px;
+  float: left;
+  clear: none;
+}
+div[data-layout="layout_columns"] > .acf-fields > .acf-field[data-name=direction],
+div[data-layout="layout_columns"] > .acf-fields > .acf-field[data-name=alignment] {
+  width: 20%;
+  min-width: 180px;
+  float: left;
+  clear: none;
+}
+
+.acf-flexible-content .layout {
+  border: solid 1px var(--COLOR-1) !important;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+}
+.acf-flexible-content .button.button-primary {
+  background: var(--add-more-button-bg);
+  color: var(--add-more-button-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "NeutraText", Arial, Lucida, sans-serif;
+}
+
+.acf-repeater > .acf-table > tbody > .acf-row > .acf-row-handle {
+  background: var(--COLOR-5);
+  color: var(--COLOR-1);
+  border-top: dashed 2px var(--COLOR-1);
+  border-bottom: dashed 2px var(--COLOR-1);
+}
+.acf-repeater > .acf-table > tbody > .acf-row > .acf-row-handle span {
+  color: white;
+  font-weight: bold;
+}
+.acf-repeater > .acf-table > tbody > .acf-row > .acf-fields,
+.acf-repeater > .acf-table > tbody > .acf-row > .acf-field {
+  border-top: dashed 2px var(--COLOR-1);
+  border-bottom: dashed 2px var(--COLOR-1);
+}
+
+.acf-icon.-clear {
+  /* color: white; */
+  /* font-size: 1rem; */
+  border-color: gray;
+}
+a.acf-icon.-collapse {
+  background: white;
+}
+
+.theme-color-pickers > .acf-input > .acf-fields {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.acf-field.admin-bg-color-num-butttons .acf-label label {
+  display: inline-block;
+  background: white;
+  padding: 0 .5rem;
+}
+
+.admin-bg-color-num-buttons .acf-button-group {
+  display: flex !important;
+}
+
+.admin-bg-color-num-buttons .acf-button-group label {
+  flex: 1 1 0 !important;  
+  max-width: 1rem;
+  color: transparent !important;
+  width: 1rem;
+  overflow: hidden;
+}
+
+.admin-bg-color-num-buttons .acf-button-group label.selected {
+  outline: dashed black 3px;
+  outline-offset: 1px; 
+  color: transparent !important; 
+}
+
+.select2-container.-acf .select2-selection--multiple .select2-selection__choice {
+  background: var(--COLOR-2) !important;
+  padding: .5rem 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: black !important;
+}
+
+.acf-field .ui-sortable .ui-sortable-handle .acf-selection {
+  font-size: 1rem;
+}
+
+div.layout[data-layout="layout_grid"] > .acf-fields > .acf-field-flexible-content > .acf-input > .acf-flexible-content > .ui-sortable {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(27rem, 100%), 1fr));
+}
+
+div.layout[data-layout="layout_grid"] > .acf-fields > .acf-field-flexible-content > .acf-input > .acf-flexible-content > .ui-sortable > .layout { 
+  margin-top: 0;
+}
+
+/* Flex Content Fields Redesign */
+
+/* page_layout_collection Flex Content */ 
+
+/* columns */
+/* .layouts div[data-layout="layout_columns"] > .acf-fields {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .layouts div[data-layout="layout_columns"] > .acf-fields > div {
+  flex: 1 1 0;
+} */
+
+.layouts div[data-layout="layout_columns"] > .acf-fields > div[data-name="column_options"] {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+/* Columns Repeater */
+.component-columns > .acf-input > .acf-repeater {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-actions {
+  order: -1;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table {
+  display: block;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > .acf-row {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > .acf-row > .acf-row-handle {
+  order: 1;
+  height: 1.75rem;
+  border: none;
+}
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > .acf-row > .acf-row-handle.order {
+  background: var(--handle-color);
+  flex-grow: 1;
+  border: none;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > .acf-row > .acf-row-handle.order > span:before {
+  content: 'Column ';
+  display: inline;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > .acf-row > .acf-row-handle.remove {
+  background: var(--COLOR-9);
+  border: none;
+}
+
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > .acf-row > .acf-fields {
+  width: 100%;
+  order: 3;
+  border: none;
+}
+
+/* 
+Hide the Proportion field if there's only 1 column (uses n+3 because there's always a hidden row) 
+*/
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable div[data-name="proportion"] {
+  display: none;
+} 
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > :nth-last-child(n+3) ~ * div[data-name="proportion"], 
+.component-columns > .acf-input > .acf-repeater > .acf-table > .ui-sortable > :nth-last-child(n+3) div[data-name="proportion"] {
+  display: block;
+}
+
+td.acf-field[data-name="heading"] input[type="text"], 
+div[data-name="heading"] input[type="text"] {
+  font-family: "brother-1816","Calibri", Optima, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.acf-field[data-name=list_type] > .acf-input > .acf-button-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(6rem,100%), 1fr));
+}
+.acf-field[data-name=list_type] > .acf-input > .acf-button-group > label {
+  white-space: normal;
+}

@@ -1,0 +1,196 @@
+/*
+These are default nav styles that are most commonly true. 
+Everything in this file should use generic classes added by WP and NOT rely on specific menu classes or IDs   
+This styles can be overriden later for edge cases in specific menus by adding 
+styles to the menu's sass file that use menu specific class/ID selectors. 
+*/
+
+nav {
+	--nav-font: var(--FONT-ACCENT-STACK);
+	--nav-font-weight: 500;
+	--nav-letter-spacing: .1ch;
+	--nav-weight: 500;
+	--nav-font-size: var(--FS-2);
+
+	position: relative;
+}
+
+ul.menu {
+	// --list-font-size: var(--FS0);
+	--list-font-size: var(--nav-font-size);
+	--list-case: uppercase;
+	--list-font-weight: bold;
+	--list-line-height: 1.25;
+	--link-font-weight: bold;
+	--li-line-height: 1.5;
+	list-style: none;
+	padding: 0;
+}
+
+li.menu-item a {
+	--link-decor: none;
+	// --link-color: white;
+	--link-font: var(--nav-font);
+	display: inline-block;
+	letter-spacing: var(--nav-letter-spacing);
+	font-size: var(--nav-font-size);
+	position: relative;
+	font-weight: var(--nav-weight);
+	text-align: center;
+	z-index: 2;
+
+	&:hover {
+		--link-color: var(--COLOR-3);
+		// position: absolute;
+	}
+
+	@include mx-desktop {
+		padding: .5rem;
+	}
+
+}
+
+// button to open submenu
+li.menu-item button {
+	font-size: var(--nav-font-size);
+	font-family: var(--nav-font);
+	font-weight: var(--nav-weight);
+	color: var(--link-color);
+	text-transform: var(--list-case);
+	padding: 0;
+	position: relative;
+	line-height: 1.5;
+	letter-spacing: var(--nav-letter-spacing);
+	border: none;
+	background: transparent;
+	// cursor: pointer;
+	z-index: 2;
+
+	// &:focus:after,
+	// &:hover:after {
+	&:focus:after {
+		content: '';
+		display: block;
+		height: 3px;
+		background: var(--COLOR-2);
+		width: 100%;
+		position: absolute;
+		bottom: -3px;
+	}
+}
+
+li.menu-item button .expand-icon--plus-minus {
+	fill: white;
+	position: absolute;
+	right: -3em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+li.menu-item-has-children:hover > button,
+li.menu-item button[aria-expanded="true"] {
+	// --link-color: white;
+}
+
+li.menu-item-has-children:hover > button:before,
+li.menu-item-has-children:hover > a:before,
+li.menu-item button[aria-expanded="true"]:before {
+	content: '';
+	width: calc(100% + 1.25rem * 2);
+	background: white;
+	position: absolute;
+	left: calc(-1 * 1.25rem);
+	top: calc(-1 * var(--PAD-3));
+	height: calc(100% + var(--PAD-3) * 2);
+	z-index: -1;
+	transition: ease-in-out .2s;
+}
+
+li.menu-item button[aria-expanded="true"] .expand-icon--plus-minus .vert {
+	display: none;
+}
+
+// explicit styles for aria-expanded false to override persistent hover state after touch on mobile
+@include mx-desktop {
+	li.menu-item button[aria-expanded="false"]:before {
+		content: none;
+	}
+
+	li.menu-item button[aria-expanded="false"] {
+		// --link-color: white;
+	}
+}
+
+.dropdown-arrow {
+	margin-inline-start: .5em;
+}
+
+
+li.menu-item > .sub-menu {
+	display: flex;
+	list-style: none;
+	// visibility: hidden;
+	// z-index: 0;
+	// opacity: 0;
+	transition: opacity ease-in-out .2s;
+	// background: var(--COLOR-4);
+	background: var(--COLOR-1);
+	width: 100%;
+	justify-content: flex-start;
+	padding: var(--PAD-2) max(1.25rem, 50vw - 1200px / 2);
+	gap: 2em;
+}
+
+@include mx-desktop {
+	.submenu-dropdown-button[aria-expanded=true] .sub-menu {
+		display: flex;
+		visibility: visible;
+	}
+}
+
+// explicit styles for aria-expanded false to override persistent hover state after touch on mobile
+// @include mx-desktop {
+//   li.menu-item > button[aria-expanded="false"] + .sub-menu {
+//     visibility: hidden;
+//     opacity: 0;
+//     z-index: 0;
+//   }
+// }
+
+li.menu-item > .sub-menu > li {
+	position: relative;
+	
+}
+
+li.menu-item > .sub-menu > li a{
+	color: white !important;
+	position: relative;
+
+}
+
+.sub-menu li a:hover {
+
+} 
+
+.sub-menu li a {
+	&:focus,
+	&:hover {
+		
+	}
+}
+
+// @include mx-tablet {
+// 	li.menu-item > .sub-menu {
+// 		flex-direction: column;
+// 	}
+
+// 	li.menu-item > .sub-menu > li > a:after {
+// 		content: '';
+// 		display: block;
+// 		height: 3px;
+// 		background: $color-2;
+// 		width: 100%;
+// 		position: absolute;
+// 		bottom: -3px;
+// 	}
+// }

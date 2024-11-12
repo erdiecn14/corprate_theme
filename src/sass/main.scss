@@ -1,0 +1,183 @@
+/*
+Theme Styles Entry Point
+*/
+
+/* All Fonts used on the site
+--------------------------------------------------------------------------------*/
+@import 'fonts';
+
+/* ----- Normalize CSS ------ */
+@import 'normalize';
+
+/* Site variables
+--------------------------------------------------------------------------------*/
+@import 'site-vars';
+@import 'typesetting';
+
+/* Global Mixins for use in all files
+    note: some mixins modified by values in global variables.
+--------------------------------------------------------------------------------*/
+@import 'mixins';
+
+/*  Slick Slider
+--------------------------------------------------------------------------------*/
+@import '../lib/accessible-slick/slick';
+@import '../lib/accessible-slick/accessible-slick-theme';
+
+/* Magnific Popup 
+--------------------------------------------------------------------------------*/
+@import '../lib/magnific-popup/magnific-popup';
+
+/* CSS Custom Properties  
+--------------------------------------------------------------------------------*/
+:root {
+  // see https://utopia.fyi/type/calculator/?c=375,13,1.125,1400,16,1.125,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-m&g=s,l,xl,12
+  --FS-2: clamp(0.6419rem, 0.5877rem + 0.2312vw, 0.79rem);
+  --FS-1: clamp(0.7225rem, 0.6617rem + 0.2595vw, 0.8888rem);
+  --FS0: clamp(0.8125rem, 0.7439rem + 0.2927vw, 1rem);
+  --FS1: clamp(0.9144rem, 0.8373rem + 0.3288vw, 1.125rem);
+  --FS2: clamp(1.0281rem, 0.9412rem + 0.3707vw, 1.2656rem);
+  --FS3: clamp(1.1569rem, 1.0592rem + 0.4166vw, 1.4238rem);
+  --FS4: clamp(1.3013rem, 1.1913rem + 0.4693vw, 1.6019rem);
+  --FS5: clamp(1.4644rem, 1.3409rem + 0.5268vw, 1.8019rem);
+  --FS6: clamp(1.6469rem, 1.5076rem + 0.5941vw, 2.0275rem);
+  --FS7: clamp(1.8531rem, 1.6967rem + 0.6673vw, 2.2806rem);
+  --FS8: clamp(2.085rem, 1.9092rem + 0.7502vw, 2.5656rem);
+  --FS9: clamp(2.345rem, 2.147rem + 0.8449vw, 2.8863rem);
+  --FS10: clamp(2.6388rem, 2.416rem + 0.9502vw, 3.2475rem);
+	
+	--PAD-7: clamp(0.88rem, calc(0.79rem + 0.27vw), 1.12rem);
+  --PAD-6: clamp(0.99rem, calc(0.86rem + 0.40vw), 1.34rem);
+  --PAD-5: clamp(1.11rem, calc(0.93rem + 0.57vw), 1.61rem);
+  --PAD-4: clamp(1.25rem, calc(1.00rem + 0.78vw), 1.93rem);
+  --PAD-3: clamp(1.40rem, calc(1.07rem + 1.04vw), 2.32rem);
+  --PAD-2: clamp(1.58rem, calc(1.14rem + 1.37vw), 2.78rem);
+  --PAD-1: clamp(1.78rem, calc(1.20rem + 1.78vw), 3.33rem);
+  --PAD0: clamp(2.00rem, calc(1.26rem + 2.29vw), 4.00rem);
+  --PAD1: clamp(2.25rem, calc(1.30rem + 2.91vw), 4.80rem);
+  --PAD2: clamp(2.53rem, calc(1.33rem + 3.69vw), 5.76rem);
+  --PAD3: clamp(2.85rem, calc(1.34rem + 4.64vw), 6.91rem);
+  --PAD4: clamp(3.20rem, calc(1.31rem + 5.82vw), 8.29rem);
+  --PAD5: clamp(3.60rem, calc(1.25rem + 7.26vw), 9.95rem);
+  --PAD6: clamp(4.05rem, calc(1.12rem + 9.02vw), 11.94rem);
+  --PAD7: clamp(4.56rem, calc(0.93rem + 11.17vw), 14.33rem);
+ 
+  --PAD-ZERO: 0;
+
+	// see https://utopia.fyi/space/calculator?c=400,32,1.067,1920,110,1.125,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-m&g=s,l,xl,12
+	--space-3xs: clamp(0.50rem, calc(0.17rem + 1.32vw), 1.75rem);
+  --space-2xs: clamp(1.00rem, calc(0.36rem + 2.57vw), 3.44rem);
+  --space-xs: clamp(1.50rem, calc(0.53rem + 3.88vw), 5.19rem);
+  --space-s: clamp(2.00rem, calc(0.72rem + 5.13vw), 6.88rem);
+  --space-m: clamp(3.00rem, calc(1.08rem + 7.70vw), 10.31rem);
+  --space-l: clamp(4.00rem, calc(1.43rem + 10.26vw), 13.75rem);
+  --space-xl: clamp(6.00rem, calc(2.15rem + 15.39vw), 20.63rem);
+  --space-2xl: clamp(8.00rem, calc(2.87rem + 20.53vw), 27.50rem);
+  --space-3xl: clamp(12.00rem, calc(4.30rem + 30.79vw), 41.25rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.50rem, calc(-0.27rem + 3.09vw), 3.44rem);
+  --space-2xs-xs: clamp(1.00rem, calc(-0.10rem + 4.41vw), 5.19rem);
+  --space-xs-s: clamp(1.50rem, calc(0.09rem + 5.66vw), 6.88rem);
+  --space-s-m: clamp(2.00rem, calc(-0.19rem + 8.75vw), 10.31rem);
+  --space-m-l: clamp(3.00rem, calc(0.17rem + 11.32vw), 13.75rem);
+  --space-l-xl: clamp(4.00rem, calc(-0.37rem + 17.50vw), 20.63rem);
+  --space-xl-2xl: clamp(6.00rem, calc(0.34rem + 22.63vw), 27.50rem);
+  --space-2xl-3xl: clamp(8.00rem, calc(-0.75rem + 35.00vw), 41.25rem);
+}
+
+html {
+  // --- CONSTANTS ---
+  // ------ Color Constants
+  // note: these color constants have corresponding sass shorthands
+  --COLOR-1: #3b3771;
+  --COLOR-2: #ed8945;
+  --COLOR-3: #e85021;
+  --COLOR-4: #49677b;
+  --COLOR-5: #000000;
+  --COLOR-6: #ffffff;
+  --COLOR-7: #28292d;
+  --COLOR-8: #f4f4f2;
+ 
+  // ------ Font Constants
+  --FONT-SANS-STACK-1: "Cutta Black","Calibri", Optima, Arial, sans-serif;
+  --FONT-SANS-STACK-2: "futura-pt", "Arial Narrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --FONT-ACCENT-STACK: "termina", Georgia;
+  --BIG-HEADING-FS: var(--FS4);
+
+  // ------ Layout Constants
+  --CONTENT-MAX-WIDTH: 87.5rem;
+  --SCREEN-SIDE-BUFFER: 32px; //set in px, don't want to increase with font size
+  --PROSE-GAP: var(--PAD-6);
+ 
+	--measure: 80ch;
+	
+	--section-y-padding: var(--PAD2);
+	--section-y-overlap: 0;
+	
+  // ------ Typography
+  --heading-color: var(--COLOR-1);
+  --heading-font: var( --FONT-ACCENT-STACK);
+  --heading-font-weight: 700;
+  --heading-case: initial;
+  --heading-line-height: 1.1;
+  
+  --body-copy-font: var(--FONT-SANS-STACK-2);
+  --body-copy-font-weight: normal;
+  --body-copy-color: var(--COLOR-1);
+  --body-copy-max-width: 90ch;
+  
+  --link-font: var(--FONT-ACCENT-STACK);
+  --link-font-weight: normal;
+  --link-color: var(--COLOR-1);
+  --link-decor: none;
+  
+  --list-font: var(--FONT-SANS-STACK-2);
+  --list-font-size: var(--FS1);
+  --list-font-weight: normal;
+  --list-line-height: 1rem;
+  --list-color: var(--COLOR-1);
+  --list-marker-color: var(--COLOR-1);
+  --list-case: normal; 
+  --li-line-height: 1;
+  
+	--y-gap: var(--PAD-2);
+  --round: 0; 
+  --button-padding: .5em 1em;
+  --button-display: inline-block;
+  --button-fill: var(--COLOR-8);
+	--button-fill-hover: var(--COLOR-1);
+  --button-color: var(--COLOR-1); 
+	--button-color-hover: white;
+	--button-border-color: var(--COLOR-3);
+	--button-border-color-hover: var(--COLOR-1);
+  --button-font-size: var(--FS-2);
+	
+	--slick-dot-color: white;
+  --slick-dot-color-active: var(--COLOR-2);
+	
+	--blog-card-side-padding: var(--FS2);
+
+  // ------ Layout Vars
+  --grid-item-min-width: 29rem; 
+}
+
+/* HTML Element basics
+--------------------------------------------------------------------------------*/
+section {
+  position: relative;
+}
+
+img {
+  line-height: 0;
+}
+
+/*  Layout and Components styles for the design
+--------------------------------------------------------------------------------*/
+@import 'layout-primitives';
+@import 'theme-components';
+@import 'page-overrides';
+
+/* Utility classes for use on the site to override or apply specific styles.
+--------------------------------------------------------------------------------*/
+@import 'util';

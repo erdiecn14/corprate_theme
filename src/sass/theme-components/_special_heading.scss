@@ -1,0 +1,41 @@
+.heading-with-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.heading-with-line h2 {
+  @include mx-desktop {
+    text-align: center;
+  }
+}
+
+.heading-line {
+  background-color: $color-1;
+  height: 2px;
+  flex-grow: 2;
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.optional-text {
+  margin: 0;
+  font-family: var(--FONT-ACCENT-STACK);
+  // font-weight: 700;
+  font-size: var(--FS1);
+  text-wrap: nowrap;
+}
+
+.small-opt-text .optional-text {
+  font-size: var(--FS-1);
+}

@@ -1,0 +1,78 @@
+.card-list {
+	list-style: none;
+	padding: 0;
+	margin-top: var(--PAD0);
+
+	// @extend .columns;
+	// --col-gutter: clamp(3.5rem, calc(2rem + 2%), 5rem);
+	// --container-threshold: #{$remq-lg};
+	--grid-gutter: clamp(3.5rem, calc(2rem + 2%), 5rem);
+	--grid-item-min-width: 20rem;
+	--list-case: none;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	// gap: var(--PAD-7); 
+	// align-items: flex-start;
+	position: relative;
+	padding-bottom: 1rem;
+	background-color: white;
+}
+
+.card %headings {
+	margin-top: var(--PAD-5);
+	text-transform: none;
+	--heading-case: none;
+}
+
+.card %headings a {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.card__cover-image {
+	order: -1;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.testimonial-avatar {
+	max-width: 12.5rem;
+}
+
+.card.linked:focus-within,
+.card.linked:hover {
+	a {
+		outline: none;
+	}
+
+	.pseudo-cta {
+		transform: scale(1.05);
+	}
+}
+
+.contact-card .card {
+	background-color: var(--COLOR-8);
+	padding-bottom: 0.5rem;
+	border-bottom: solid 2px var(--COLOR-3);
+	width: 100% !important;
+}
+
+.contact-card .card a {
+	font-size: var(--FS-1);
+}

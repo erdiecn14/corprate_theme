@@ -1,0 +1,32 @@
+.spreadsheet-wrapper {
+  max-width: 1890px;
+  overflow: scroll;
+
+  background: white;
+}
+
+.spreadsheet-wrapper table {
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+
+.spreadsheet-wrapper th {
+  font-family: var(--FONT-ACCENT-STACK);
+  font-size: var(--FS1);
+  font-weight: 500;
+
+  padding: 10px;
+  text-align: start;
+  background-color: var(--COLOR-1);
+  color: white;
+}
+
+.spreadsheet-wrapper tr td {
+  font-family: var(--FONT-ACCENT-STACK);
+  font-size: var(--FS1);
+  font-weight: 500;
+
+  padding: 10px;
+  border: solid 1px black;
+  white-space: nowrap;
+}

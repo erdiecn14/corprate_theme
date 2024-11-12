@@ -1,0 +1,73 @@
+// .page-main-article > section {
+main > section,
+main > article > section {
+	--y-gap: var(--PROSE-GAP);
+  // padding-left: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2);
+  // padding-right: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2);
+  // padding-top: var(--PAD2);
+  // padding-bottom: var(--PAD2);
+}
+
+// main sections
+// main > section + section {
+//   margin-top: var(--PAD1);
+// }
+
+// items in main sections 
+// main > section * + * {
+//   margin-top: var(--PAD-1);
+// } 
+
+section.hugger {
+  padding-left: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2);
+  padding-right: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2);
+}
+
+.container {
+  padding-left: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2) !important;
+  padding-right: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2) !important;
+}
+
+.contained {
+  max-width: min(calc(100% - var(--SCREEN-SIDE-BUFFER)) * 2, var(--CONTENT-MAX-WIDTH));
+}
+
+section.has-bg-image {
+	position: relative;
+}
+
+section .section-bg-image {
+	background-color: inherit;
+	height: 90%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	// top: 0;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: inherit;
+		opacity: .85;
+	}
+}
+
+section .section-bg-image img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+@include mx-desktop{
+	section:not(:first-child){
+		padding-left: var(--PAD3);
+		padding-right: var(--PAD3);
+	}
+
+}
+

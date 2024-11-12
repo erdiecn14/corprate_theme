@@ -1,0 +1,165 @@
+%txt-md {
+  font-size: var(--FS0);
+}
+%txt-lg {
+  font-size: var(--FS1);
+}
+%txt-xl {
+  font-size: var(--FS2);
+}
+%txt-xxl {
+  font-size: var(--FS3);
+}
+%txt-xxxl {
+  font-size: var(--FS4);
+}
+%txt-huge {
+  font-size: var(--FS5);
+}
+%txt-sm {
+  font-size: var(--FS-1);
+}
+
+%headings-typesetting {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  // letter-spacing: .1ch;
+  text-transform: var(--heading-case);
+}
+
+%headings-layout {
+  margin: 0;
+  // max-width: 21em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // broke up headings placeholders so they can be extended in more specific ways
+  @extend %headings-typesetting; // only styles related to font, color, and letter spacing
+  @extend %headings-layout; // styles related to how headings behave with surroundings
+  @extend %headings
+      !optional; // %headings can be used in other sass files to apply styles to all headings but nothing specific is applied to the placeholder in this file
+}
+
+h1 {
+  font-size: var(--all-heading-font-size, var(--FS7));
+  font-family: var(--FONT-SANS-STACK-1);
+  letter-spacing: 0;
+  font-weight: 900;
+}
+h2 {
+  font-size: var(--all-heading-font-size, var(--FS7));
+  font-family: var(--FONT-SANS-STACK-1);
+  letter-spacing: 0;
+  font-weight: 900;
+}
+h3 {
+  font-size: var(--all-heading-font-size, var(--FS1));
+  letter-spacing: 0.1ch;
+ 
+}
+h4 {
+  font-size: var(--all-heading-font-size, var(--FS5));
+}
+h4 {
+  font-size: var(--all-heading-font-size, var(--FS4));
+}
+h5 {
+  font-size: var(--all-heading-font-size, var(--FS0));
+}
+h6 {
+  font-size: var(--all-heading-font-size, var(--FS-1));
+}
+
+// h1, h2 {
+// 	&:after {
+// 		content: '';
+// 		display: block;
+// 		height: .43rem;
+// 		width: 4rem;
+// 		background: var(--COLOR-2);
+// 		// margin-top: var(--y-gap);
+// 		margin-top: var(--PROSE-GAP);
+// 	}
+// }
+
+// centered bar
+// h1[style*="text-align: center;"],
+// h2[style*="text-align: center;"] {
+// 	&:after {
+// 		margin-inline: auto;
+// 	}
+// }
+
+%headings-typesetting strong {
+  color: var(--heading-color);
+  font-family: var(--FONT-SANS-STACK-2);
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: 0.1ch;
+  text-transform: none;
+}
+
+//--body copy and links
+p {
+  --link-decor: underline;
+  font-size: var(--FS1);
+  font-family: var(--body-copy-font);
+  font-weight: var(--body-copy-font-weight);
+  color: var(--body-copy-color);
+  max-width: var(--body-copy-max-width);
+  line-height: 1.5;
+  text-transform: none;
+  margin: 0;
+}
+
+p > img {
+  display: block;
+  margin-block-end: var(--PAD-5);
+}
+
+a {
+  font-family: var(--link-font);
+  // font-weight: var(--link-font-weight);
+  font-weight: inherit;
+  color: var(--link-color);
+  text-decoration: var(--link-decor);
+}
+
+ul,
+ol {
+  color: var(--list-color);
+  font-family: var(--list-font);
+  font-size: var(--list-font-size);
+  font-weight: var(--list-font-weight);
+  line-height: var(--list-line-height);
+  text-transform: var(--list-case);
+  padding-inline-start: 1em;
+  margin: 0;
+  li {
+    color: var(--list-marker-color);
+    line-height: var(--li-line-height);
+  }
+  li em {
+    text-transform: none;
+  }
+  li::marker {
+    color: var(--list-marker-color);
+    font-size: 0.7em;
+  }
+}
+
+h3 + p {
+  margin-top: 0 !important;
+}
+
+/* vertical spacing between multiple elements within bullet super list item */
+.bullet-list li + li {
+  margin-top: var(--PAD-6);
+}

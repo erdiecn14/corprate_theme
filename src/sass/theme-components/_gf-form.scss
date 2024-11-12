@@ -1,0 +1,132 @@
+.gform_wrapper.gravity-theme {
+  .real-realty-form {
+    input[type=color],  input[type=date],  input[type=datetime-local],  input[type=datetime],  input[type=email],  input[type=month],  input[type=number],  input[type=password],  input[type=search],  input[type=tel],  input[type=text],  input[type=time],  input[type=url],  input[type=week],  select,  textarea {
+      border-radius: var(--round);
+			font-family: var(--FONT-SANS-STACK-1);
+      font-size: var(--FS1);
+      padding: .75em 1rem;
+      border-width: 2px;
+			border-color: var(--COLOR-1);
+			color: var(--COLOR-1);
+      &:focus {
+				outline: none;
+        background: var(--COLOR-2);
+				color: var(--COLOR-1);
+				border-radius: var(--round);
+      }
+    }
+		::placeholder {
+			color: var(--COLOR-1);
+		}
+		select {
+			-webkit-appearance: none;
+			// padding: .5rem;
+			// font-size: var(--FS1);
+			// font-family: var(--FONT-SANS-STACK-2);
+			// color: var(--COLOR-1);
+			// border: solid 2px var(--COLOR-1);
+			// background: white;
+			// margin: var(--PAD1) auto 0;
+			// width: 100%;
+			background-image:
+				linear-gradient(45deg, transparent 50%, var(--COLOR-1) 50%), // arrow corner
+				linear-gradient(135deg, var(--COLOR-1) 50%, transparent 50%), // arrow corner
+				linear-gradient(to right, var(--COLOR-2), var(--COLOR-2)); // arrow box background
+			background-position:
+				calc(100% - 20px) 1.2em,
+				calc(100% - 15px) 1.2em,
+				100% 0;
+			background-size:
+				5px 5px,
+				5px 5px,
+				2.5rem 100%;
+			background-repeat: no-repeat;
+			&:focus {
+				background-image:
+					linear-gradient(45deg, white 50%, transparent 50%), // arrow corner focuses
+					linear-gradient(135deg, transparent 50%, white 50%), // arrow corner focused
+					linear-gradient(to right, var(--COLOR-1), var(--COLOR-1)); // arrow box background focused
+				background-position:
+					calc(100% - 15px) 1.2em,
+					calc(100% - 20px) 1.2em,
+					100% 0;
+				background-size:
+					5px 5px,
+					5px 5px,
+					2.5rem 100%;
+				background-repeat: no-repeat;
+				border-color: var(--COLOR-1); // arrow box border focused
+				outline: 0;
+			}
+		}
+		// .address_state select {
+		// 	background-image: none;
+		// }
+		.ginput_container_address {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.ginput_container_address span {
+			flex: 1 1 auto;
+		}
+    .gfield_label {
+      color: var(--COLOR-1); 
+      font-family: var(--FONT-SANS-STACK-1);
+      font-weight: 900;
+      font-size: var(--FS0);
+      text-transform: uppercase;
+    }
+    .gform_footer input[type=submit] {
+        margin: 0 auto;
+        --link-decor: none;
+        border: none;
+        color: var(--button-color);
+        background: var(--button-fill);
+        border-bottom: solid 2px var(--button-border-color);
+        display: var(--button-display);
+        padding: var(--button-padding);
+        font-family: var(--FONT-ACCENT-STACK);
+        font-size: var(--button-font-size);
+        font-weight: 700;
+        letter-spacing: 0.1ch;
+        text-align: center;
+        text-transform: uppercase;
+        // text-decoration: none;
+        transition: ease-in-out 0.2s;
+        // background-image: linear-gradient(
+        //   to bottom,
+        //   var(--button-fill) 0%,
+        //   var(--button-fill) 42%,
+        //   var(--button-fill-hover) 62%,
+        //   var(--button-fill-hover) 100%
+        // );
+        // background-size: 100% 230%;
+        position: relative;
+      
+        &:focus,
+        &:hover {
+          outline: none;
+          background-position: center 99%;
+          color: var(--button-color-hover);
+          background-color: var(--COLOR-1);
+          // border-color: var(--button-border-color-hover);
+          border-bottom: 2px solid var(--COLOR-3);
+          transform: scale(1.05);
+          transition: ease-in-out 0.2s;
+      
+          svg {
+            fill: white;
+          }
+        }
+        // &:after {
+        //   content: "";
+        //   width: calc(100% + 8px);
+        //   height: 2px;
+        //   background: rgba(0, 0, 0, 0);
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: -4px;
+        //   transition: ease-in-out 0.2s;
+  }
+}
+}

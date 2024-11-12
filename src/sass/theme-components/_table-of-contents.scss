@@ -1,0 +1,142 @@
+nav.table-of-contents {
+  --list-font-size: var(--FS0);
+  
+  button.toc-heading {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-size: var(--FS2);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-line-height);
+    letter-spacing: .1ch;
+    text-transform: var(--heading-case);
+    display: none;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    background: white;
+    border: none;
+    padding: 1rem 0;
+    cursor: pointer;
+    
+    @include mx-desktop {
+      display: flex;
+    }
+  }
+    
+  button.toc-heading:focus {
+    outline: none;
+  }
+    
+  button.toc-heading:focus svg.expand-icon--plus-minus {
+    outline: solid $color-1;
+    outline-offset: 4px;
+    outline-width: 3px;
+  }
+
+  button.toc-heading:after { 
+    content: '';
+    display: block;
+    background: $color-2;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  header {
+    @extend %headings-typesetting;
+    font-size: var(--FS2);
+    padding: 1rem 0;
+    display: block;
+    
+    @include mx-desktop {
+      display: none;
+    }
+  }
+  
+  .toc-heading .expand-icon--plus-minus {
+    height: 1.5rem;
+    fill: $color-1;
+  }
+  
+  @include mx-desktop {
+    .toc-toggle[aria-expanded="true"] .vert {
+      display: none;
+    }
+  
+    .toc-toggle[aria-expanded="false"] ~ .toc-description, 
+    .toc-toggle[aria-expanded="false"] ~ ul.content-list {
+      display: none;
+    }
+  }
+
+  // the topmost list in the TOC hierarchy
+  ul.content-list {
+    transition: none;
+  } 
+  
+  // all lists
+  ul {
+    padding: 0;
+    position: relative;
+    list-style: none;
+    max-width: 35ch;
+  }
+  
+  & > ul:after {
+    content: '';
+    display: block;
+    background: $color-2;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  // all list items
+  li {
+    position: relative;
+    transition: background-color ease-in-out .2s;
+  } 
+
+  li:before {
+    content: '';
+    display: block;
+    background: $color-2;
+    width: 100%;
+    height: 5px;
+    border-radius: var(--round);
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  // list items in nested lists
+  ul ul li {
+    background: #EBEBEB;
+  }
+  
+  // all links in TOC
+  ul li > a {
+    display: block;
+    padding: 1em 1em 1em .75em;
+    transition: color ease-in-out .2s;
+    text-decoration: none;
+    
+    &:hover {
+      background: $color-1;
+      --link-color: white;
+    }
+  }
+  
+  // links in nested lists
+  ul ul > li > a {
+    padding-left: 1.5rem;
+  }
+  
+}

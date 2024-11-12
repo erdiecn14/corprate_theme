@@ -1,0 +1,1 @@
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="m24 40.55-3.35-3.4 10.85-10.8H7.45v-4.7H31.5L20.65 10.8 24 7.45 40.55 24Z"/></svg>

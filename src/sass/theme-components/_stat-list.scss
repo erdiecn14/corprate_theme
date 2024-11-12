@@ -1,0 +1,89 @@
+.stat-list {
+  @extend .columns;
+  --container-threshold: #{$remq-lg};
+  --col-gutter: var(--PAD0);
+  --list-case: normal;
+  list-style: none;
+  padding: 0;
+  margin-top: var(--PAD-1);
+}
+
+.stat-list li {
+  margin: 0;
+
+  border: solid 1.5px var(--COLOR-3);
+}
+
+.stat-list li p {
+  font-family: var(--FONT-ACCENT-STACK);
+  font-size: var(--FS0);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stat-list figure.stat-card {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  padding: var(--PAD-3) var(--PAD-5);
+  // > * + * {
+  //   margin-top: var(--PAD-5);
+  // }
+}
+
+figure.stat-card .stat-datapoint {
+  font-size: var(--FS7);
+  font-family: var(--FONT-SANS-STACK-1);
+  color: var(--stat-color);
+
+  // &:after {
+  //   content: '';
+  //   width: 100%;
+  //   display: block;
+  //   height: 5px;
+  //   border-radius: var(--round);
+  //   background-color: var(--stat-color, #{$color-3});
+  //   margin: var(--PAD-2) 0;
+  // }
+}
+
+figcaption.stat-details {
+  --heading-font-size: var(--FS1);
+  > * + * {
+    margin-top: var(--PAD-7);
+  }
+}
+
+// default automatically alternate colors
+// .stat-list li:nth-child(1n) {
+//   --stat-color: #{$color-3};
+// }
+
+// .stat-list li:nth-child(2n) {
+//   --stat-color: #{$color-2};
+// }
+
+// .stat-list li:nth-child(3n) {
+//   --stat-color: #{$color-5};
+// }
+
+// .stat-list li:nth-child(4n) {
+//   --stat-color: #{$color-1};
+// }
+
+// utility classes for overriding colors
+// .stat-color-1 {
+//   --stat-color: #{$color-1};
+// }
+// .stat-color-2 {
+//   --stat-color: #{$color-2};
+// }
+// .stat-color-3 {
+//   --stat-color: #{$color-3};
+// }
+// .stat-color-4 {
+//   --stat-color: #{$color-4};
+// }
+// .stat-color-5 {
+//   --stat-color: #{$color-5};
+// }

@@ -1,0 +1,161 @@
+aside.sidebar section {
+  padding: 0;
+}
+
+aside.sidebar li {
+  max-width: 23ch;
+}
+
+aside.sidebar ul + h2 {
+  margin-top: var(--PAD4);
+}
+
+aside.sidebar ul + h2 {
+  margin-top: var(--PAD4);
+}
+
+aside.sidebar .wp-block-tags,
+aside.sidebar .wp-block-categories,
+aside.sidebar .wp-block-latest-posts {
+  --link-decor: underline;
+  list-style: none;
+  padding: 0 .5rem; 
+  li + li {
+    margin-top: var(--PAD-2);
+  }
+}
+
+aside.sidebar a {
+  text-decoration: underline;  
+  text-decoration-color: var(--COLOR-3);
+  text-decoration-thickness: 3px;
+  
+  &:hover {
+    text-decoration-color: var(--COLOR-1);
+  }
+}
+
+aside.sidebar .cat-item a {
+  display: block;
+  color: white;
+  background: var(--COLOR-5);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: ease-in-out .2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+aside.tax-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--PAD4);
+}
+
+// -- Toggle Styles ---------------------------------
+
+
+
+nav.taxonomy-links {
+  --list-font-size: var(--FS0);
+}
+
+nav.taxonomy-links header {
+  @extend %headings-typesetting;
+  font-size: var(--FS2);
+  display: block;
+}
+
+.tax-heading-text {
+  font-size: var(--FS2);
+}
+
+.tax-description {
+  font-size: var(--FS0);
+  margin-top: .25rem;
+}
+
+button.tax-toggle {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  // font-size: var(--FS2);
+  font-size: inherit;
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  letter-spacing: .1ch;
+  text-transform: var(--heading-case);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  background: white;
+  border: none;
+  padding: 0 0 .5rem 0;
+  cursor: pointer;
+}
+  
+button.tax-toggle:focus {
+  outline: none;
+}
+  
+button.tax-toggle:focus svg.expand-icon--plus-minus {
+  outline: solid $color-1;
+  outline-offset: 4px;
+  outline-width: 3px;
+}
+
+button.tax-toggle:after { 
+  content: '';
+  display: block;
+  background: $color-2;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.tax-toggle .expand-icon--plus-minus {
+  height: 1.5rem;
+  fill: $color-1;
+}
+
+nav.taxonomy-links .cat-item {
+  font-size: var(--FS-1);
+}
+
+@include mn-desktop {
+  .tax-toggle-nav {
+    display: none;
+  }
+}
+
+@include mx-desktop {
+  .tax-static-nav {
+    display: none;
+  }
+}
+
+// the topmost list in the TOC hierarchy
+ul.tax-list {
+  --y-gap: var(--PAD-7);
+  transition: none;
+} 
+
+nav.tax-toggle-nav .tax-list {
+ margin-top: var(--PAD2);
+}
+
+ul.tax-list {
+  padding: 0;
+  position: relative;
+  list-style: none;
+  max-width: 35ch;
+}

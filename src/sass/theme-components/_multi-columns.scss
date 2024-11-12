@@ -1,0 +1,58 @@
+.multi-column {
+  --col-gutter: var(--PAD4);
+  --container-threshold: #{$remq-md};
+  // --container-threshold: #{$remq-lg};
+  @extend .columns;
+  align-items: center;
+  
+  & > %headings {
+    flex-basis: 100%;
+    max-width: none;
+  }
+  
+  & > * {
+    margin-top: initial;
+  }
+  
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  // & > .prose {
+  //   --col-ratio: 1.25;
+  // }
+  
+  // & > .faq-column {
+  //   margin-block: auto;
+  // }
+  
+}
+
+.column {
+	container: column / inline-size;
+}
+
+.manual-2-col {
+	.column {
+		flex-basis: 60ch; 
+		width: calc(50% - var(--col-gutter));
+		// width: 50%;
+		flex-grow: 1;
+	}
+}
+
+.manual-3-col {
+	.column {
+		flex-basis: 60ch; 
+		width: calc(33.333% - (var(--col-gutter) * 2));
+		// width: 50%;
+		flex-grow: 1;
+	}
+}
+
+
+@include mx-desktop{
+  .hide-on-mobile{
+    display: none;
+  }
+}

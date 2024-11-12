@@ -1,0 +1,125 @@
+// main section form * + * {
+//   margin-top: initial;
+// }
+
+// form {
+//   --round: 15px;
+// }
+
+.gform_wrapper.gravity-theme {
+  .stratford-partners-form {
+    
+    input[type=color],  input[type=date],  input[type=datetime-local],  input[type=datetime],  input[type=email],  input[type=month],  input[type=number],  input[type=password],  input[type=search],  input[type=tel],  input[type=text],  input[type=time],  input[type=url],  input[type=week],  select,  textarea {
+      border-radius: var(--round);
+			font-family: var(--FONT-SANS-STACK-1);
+      font-size: var(--FS1);
+      padding: .75em 1rem;
+      border-width: 2px;
+			border-color: var(--COLOR-1);
+			color: var(--COLOR-1);
+      
+      &:focus {
+				outline: none;
+        background: var(--COLOR-2);
+				color: var(--COLOR-1);
+				border-radius: var(--round);
+      }
+    }
+		
+		::placeholder {
+			color: var(--COLOR-1);
+		}
+		
+		select {
+			-webkit-appearance: none;
+			// padding: .5rem;
+			// font-size: var(--FS1);
+			// font-family: var(--FONT-SANS-STACK-2);
+			// color: var(--COLOR-1);
+			// border: solid 2px var(--COLOR-1);
+			// background: white;
+			// margin: var(--PAD1) auto 0;
+			// width: 100%;
+			
+			background-image:
+				linear-gradient(45deg, transparent 50%, var(--COLOR-1) 50%), // arrow corner
+				linear-gradient(135deg, var(--COLOR-1) 50%, transparent 50%), // arrow corner
+				linear-gradient(to right, var(--COLOR-2), var(--COLOR-2)); // arrow box background
+			background-position:
+				calc(100% - 20px) 1.2em,
+				calc(100% - 15px) 1.2em,
+				100% 0;
+			background-size:
+				5px 5px,
+				5px 5px,
+				2.5rem 100%;
+			background-repeat: no-repeat;
+			
+			&:focus {
+				background-image:
+					linear-gradient(45deg, white 50%, transparent 50%), // arrow corner focuses
+					linear-gradient(135deg, transparent 50%, white 50%), // arrow corner focused
+					linear-gradient(to right, var(--COLOR-1), var(--COLOR-1)); // arrow box background focused
+				background-position:
+					calc(100% - 15px) 1.2em,
+					calc(100% - 20px) 1.2em,
+					100% 0;
+				background-size:
+					5px 5px,
+					5px 5px,
+					2.5rem 100%;
+				background-repeat: no-repeat;
+				border-color: var(--COLOR-1); // arrow box border focused
+				outline: 0;
+			}
+		}
+		
+		// .address_state select {
+		// 	background-image: none;
+		// }
+		.ginput_container_address {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.ginput_container_address span {
+			flex: 1 1 auto;
+		}
+    
+    .gfield_label {
+      color: var(--COLOR-1); 
+      font-family: var(--FONT-SANS-STACK-1);
+      font-weight: 900;
+      font-size: var(--FS0);
+      text-transform: uppercase;
+    }
+    
+    .gform_footer input[type=submit] {
+      background: var(--COLOR-2);
+      border: none;
+      border-radius: var(--round);
+      padding: 1em 1rem;
+      color: var(--COLOR-1);
+      font-family: var(--FONT-SANS-STACK-1);
+      font-weight: 900;
+      font-size: var(--FS1);
+      text-align: center;
+      text-transform: uppercase;
+      transition: ease-in-out .2s;
+      width: 100%;
+      cursor: pointer;
+
+      &:focus {
+        outline: solid 3px var(--COLOR-1);
+        outline-offset: 3px;
+        transform: scale(1.01);
+      }
+
+      &:hover {
+        outline: solid 3px var(--COLOR-1);
+        transform: scale(1.01);
+      }
+    }
+
+  }
+}

@@ -1,0 +1,160 @@
+@use "sass:math";
+
+%background-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.video-wrapper {
+	padding-bottom: var(--PAD-7);
+	border-bottom: solid 6px var(--COLOR-2);
+	
+  video {
+    max-width: 100%;
+    height: auto; 
+  }
+}
+
+.video-embed {
+  aspect-ratio: 16/9;
+  $shadow-width: 20px;
+  border-radius: var(--round);
+  margin-bottom: $shadow-width;
+  iframe {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--round);
+  }
+}
+
+.background-video-container {
+  @extend %background-video;
+}
+
+.hero-background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.video-component {
+	line-height: 0;
+
+  .fallback-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: ease-in-out .2s;
+    img {
+      height: 100%;
+      width: 100%;
+      line-height: 0;
+      object-fit: cover;
+    }
+  }
+  &:hover {
+    .video-control-button-container {
+      opacity: 1;
+    }
+  }
+
+  .video-control-button-container {
+    position: absolute;
+    bottom: 0;
+    // background: rgba(0,0,0,.4);
+    // border-radius: 50%;
+    // width: 3rem;
+    // height: 3rem;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+    z-index: 9;
+    // opacity: 0;
+    transition: ease-in-out .2s;
+    
+    @include mx-desktop {
+      opacity: 1;
+    }
+    
+    button {
+      background: none;
+      border: none;
+			// border: solid 3px black;
+			border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+    
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: rgba(white,.6);
+    }
+    
+    .video-control-button {
+      &:hover {
+        cursor: pointer;
+      }
+			&:focus {
+				outline: none;
+			}
+			&:focus svg {
+				outline: solid 2px black;
+				border: solid 2px var(--COLOR-2);
+			}
+      &[aria-label="play"] {
+				width: 100%;
+				height: 100%;
+				background: transparent;
+				opacity: 1;
+        .pause-icon {
+          display: none;
+        }
+				.play-icon {
+					aspect-ratio: 1/1;
+					background: rgba(0,0,0,.5);
+					border-radius: 50%;
+					width: auto;
+					height: 50%;
+				}
+      }
+      &[aria-label="pause"] {
+				height: 3em;
+				width: 3em;
+				background: rgba(0,0,0,.7);
+        .play-icon {
+          display: none;
+        }
+      }
+    }
+    
+  }
+  
+  @media (prefers-reduced-motion) {
+    .video-control-button-container {
+      opacity: 1;
+    }
+  }
+  
+}
+.userplay-video {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,229 @@
+.site-footer {
+	--link-decor: none;
+  border-top: solid 2px var(--COLOR-3);
+  
+	
+	%headings:after {
+		content: none;
+	}
+	
+	a {
+		&:hover {
+			color: var(--COLOR-2);
+		}
+		&:focus {
+			outline: none;
+			color: var(--COLOR-2);
+			--link-decor: underline;
+		}
+	}
+	
+	
+	%button {
+		&:hover {
+			color: currentColor;
+		}
+		&:focus {
+			color: currentColor;
+			--link-decor: none;
+		}
+	}
+	
+	.footer-top {
+		border-bottom: solid 4px var(--COLOR-2);
+		--stacked-gap: 2.5rem;
+	}
+	
+	.footer-bottom {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+    justify-content: center;
+		gap: var(--PAD1);
+    padding-left: var(--PAD0);
+    padding-right: var(--PAD0);
+	}
+	
+	.footer-bottom .footer-logo {
+		flex-grow: 1;
+	  max-width: 17rem;	
+		// img {
+		// 	max-width: 300px;
+		// }
+		@include mx-phone {
+			text-align: center;
+		}
+	}
+	
+	.hours-list ul {
+		padding-left: 0;
+		@include mx-phone {
+			text-align: center;
+		}
+	}
+	
+	.footer-end {
+		--y-gap: 1em;
+		--stacked-gap: 2rem;
+		--col-gutter: var(--PAD2);
+		--container-threshold: 30rem;
+		align-items: center;
+		flex-grow: 1.5;
+		flex-basis: 30rem;
+	}
+
+  .footer-end .nav-column{
+    flex-grow: 4;
+  }
+	
+	.footer-contact .email-link {
+		color: var(--COLOR-2);
+	}
+
+  .footer-bottom__copy {
+    margin: 0 auto;
+  }
+	
+
+  ul.footer-contact {
+    list-style: none;
+    padding: 0;
+		--y-gap: 1em;
+    --li-line-height: 1;
+
+
+    
+    // > * + * {
+    //   margin-top: .7em;
+    // }
+
+    @include mx-desktop {
+      text-align: center;
+      // align-items: center;
+      // > * + * {
+      //   margin-top: 1rem;
+      // }
+    }
+  }
+
+  ul.footer-contact li {
+    text-align: center;
+  }
+ 
+  ul.footer-contact li a{
+    font-family: var(--body-copy-font) !important;
+    text-align: center;
+    font-size: var(--FS0);
+  }
+  // ul.social-link-list {
+  //   display: flex;
+  //   align-items: center;
+  //   list-style: none;
+  //   padding: 0;
+  //   gap: 1.5rem;
+  //   margin-top: 1.75rem;
+    
+  //   @include mx-desktop {
+  //     justify-content: center;
+  //   }
+  // }
+  
+  // li.social-link {
+  //   width: 1.5rem;
+    
+  //   a:hover:after {
+  //     content: none;
+  //   }
+
+  //   svg {
+  //     display: block;
+  //     fill: $color-7;
+  //     &:hover {
+  //       fill: white;
+  //     }
+  //   }
+  // }
+  
+  // .email-link  {
+  //   position: relative;
+  //   &:after {
+  //     content: '';
+  //     background: white;
+  //     position: absolute;
+  //     height: 2px;
+  //     width: 100%;
+  //     bottom: -2px;
+  //     left: 0;
+  //   }
+  // }
+ 
+  // .footer-bottom {
+  //   margin-top: var(--PAD2);  
+  //   text-align: center;
+  //   --heading-color: white;
+  // }
+  
+  // .footer-bottom__copy {
+  //   margin-top: var(--PROSE-GAP);
+  //   width: fit-content;
+  //   margin-inline: auto;
+  //   text-align: initial;
+  // }
+  
+  // .footer-bottom__copy %headings {
+  //   max-width: 100%;
+  // }
+ 
+  // .education-board %headings,
+  // .board-heading {
+  //   font-size: var(--FS1);
+  //   margin: 0 auto;
+  // }
+  
+  // .education-board ul,
+  // ul.board-list {
+  //   list-style: none;
+  //   padding: 0;
+  //   margin: 1rem auto 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-flow: row wrap;
+  //   max-width: 80ch;
+  //   li {
+  //     font-size: var(--FS0);
+  //     text-transform: none;
+  //     &:not(:first-of-type):before {
+  //       content: ' | ';
+  //       display: inline;
+  //       margin: 0 .5em;
+  //     }
+  //   }
+  //   @include mx-tablet {
+  //     flex-direction: column;
+  //     align-items: center;
+  //     li + li {
+  //       margin-top: .5em;
+  //     }
+  //     li:not(:first-of-type):before {
+  //       content: none;
+  //     }
+  //   }
+  // }
+  
+  .copyright {
+    font-size: var(--FS0);  
+  }
+  
+  .legal-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 3rem;
+		padding-bottom: 2rem;
+    gap: 2rem;
+    color: white;
+    font-family: var(--body-copy-font) !important;
+  }
+  
+}

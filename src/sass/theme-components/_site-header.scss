@@ -1,0 +1,30 @@
+header.site-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+} // -- header.site-header
+  
+.top-logo {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  img {
+    max-width: 200px;
+    // width: 300px;
+  }
+  @include mx-desktop {
+    margin-left: 0;
+    z-index: 9;
+    img {
+      width: 200px;
+    }
+  }
+}
+
+.custom-logo-link {
+  line-height: 0;
+}
+  

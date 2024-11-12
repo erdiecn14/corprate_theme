@@ -1,0 +1,19 @@
+.with-sidebar--right,
+.with-sidebar--left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sidebar-gap, var(--FS1));
+}
+
+.with-sidebar--right > :last-child, 
+.with-sidebar--left > :first-child {
+  flex-grow: 1;
+  flex-basis: var(--sidebar-width, auto);
+}
+
+.with-sidebar--right > :first-child, 
+.with-sidebar--left > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: var(--not-sidebar-min-width, 50%);
+}

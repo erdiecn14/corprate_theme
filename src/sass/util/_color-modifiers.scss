@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------------------------
+    BACKGROUND COLORS
+--------------------------------------------------------------------------------*/
+
+.bg-w,
+.background-w {
+  background: white;
+  --heading-color: #{$color-1};
+  --body-copy-color: #{$color-9};
+  --button-fill: #{$color-1};
+	--button-fill-hover: var(--COLOR-1);
+  --button-color: var(--COLOR-1);
+	--button-color-hover: white;
+	--button-border-color-hover: var(--COLOR-1);
+  --list-color: #{$color-9};
+  --link-color: #{$color-1};
+	--bar-eraser-color: white;
+}
+
+.bg-w strong {
+  --heading-color: #{$color-2};
+}
+
+.bg-1,
+.background-1 {
+  --link-color: white;
+  --body-copy-color: white;
+  --list-color: white !important;
+  --heading-color: white;
+  --button-fill: white;
+	--button-fill-hover: white;
+	--button-border-color: var(--COLOR-3);
+	--button-border-color-hover: white;
+  --button-color: var(--COLOR-1);
+	--button-color-hover: var(--COLOR-1);
+  --frame-color: white;
+  --frame-shadow-color: #{$color-3};
+  --copy-frame-shadow-color: #{$color-2};
+	--bar-eraser-color: var(--COLOR-1);
+  background-color: var(--COLOR-1);
+}
+
+.bg-1 strong {
+  --heading-color: white;
+}
+
+.bg-1 .prose ul li {
+  --list-color: white;
+  --list-marker-color: white;
+}
+
+.bg-2,
+.background-2 {
+  background-color: var(--COLOR-2);
+  --body-copy-color: black;
+  --heading-color: black;
+  --list-color: black;
+  --button-fill: var(--COLOR-4);
+  --button-color: var(--COLOR-1);
+	--button-border-color: var(--COLOR-1);
+	--bar-eraser-color: var(--COLOR-2);
+}
+
+.bg-3,
+.backgrond-3 {
+  background-color: $color-3;
+  --heading-color: var(--COLOR-1);
+  --body-copy-color: black;
+  --list-color: black;
+	--button-fill: transparent;
+  --button-color: var(--COLOR-1);
+	--button-border-color: var(--COLOR-1);
+	--bar-eraser-color: var(--COLOR-3);
+}
+
+.bg-4,
+.background-4 {
+  background-color: $color-4;
+  --heading-color: var(--COLOR-1);
+  --body-copy-color: black;
+  --list-color: black;
+	--button-fill: transparent;
+  --button-color: var(--COLOR-1);
+	--button-border-color: var(--COLOR-1);
+	--bar-eraser-color: var(--COLOR-4);
+}
+
+.bg-5,
+.background-5 {
+  background-color: $color-5;
+  --link-color: white;
+  --body-copy-color: white;
+  --list-color: white;
+  --heading-color: white;
+  --button-fill: var(--COLOR-4);
+	--button-border-color: var(--COLOR-4);
+  --button-color: var(--COLOR-1);
+  --frame-color: white;
+  --frame-shadow-color: #{$color-3};
+  --copy-frame-shadow-color: #{$color-2};
+	--bar-eraser-color: var(--COLOR-5);
+}
+
+.bg-6,
+.background-6 {
+  background-color: $color-6;
+  --heading-color: #{$color-1};
+  --body-copy-color: #{$color-9};
+  --button-fill: #{$color-1};
+  --button-color: white;
+  --list-color: #{$color-9};
+  --link-color: #{$color-1};
+	--bar-eraser-color: var(--COLOR-6);
+}
+
+.bg-7,
+.background-7 {
+  background-color: $color-7;
+  --heading-color: white;
+  --body-copy-color: white;
+  --button-fill: white;
+  --button-color: white;
+  --list-color: white;
+  --link-color: white;
+	--bar-eraser-color: var(--COLOR-7);
+}
+
+.bg-8,
+.backgrond-8 {
+  background-color: $color-8;
+  --heading-color: var(--COLOR-1);
+  --body-copy-color: black;
+  --list-color: black;
+	--button-fill: transparent;
+  --button-color: var(--COLOR-1);
+	--button-border-color: var(--COLOR-1);
+	--bar-eraser-color: var(--COLOR-3);
+}
+
+/*--------------------------------------------------------------------------------
+    COLORS
+--------------------------------------------------------------------------------*/
+
+.color-1 {
+  color: $color-1;
+}
+.color-2 {
+  color: $color-2;
+}
+.color-3 {
+  color: $color-3;
+}
+.color-4 {
+  color: $color-4;
+}
+.color-5 {
+  color: $color-5;
+}
+.color-6 {
+  color: $color-6;
+}
+

@@ -1,0 +1,69 @@
+// Stack with custom props
+.stack > * + * {
+  margin-top: var(--y-gap, var(--PAD-2));
+}
+
+.stack-all * + * {
+  margin-top: var(--y-gap, var(--PAD-2));
+}
+
+// .stack > * + * {
+//   margin-top: 1.75rem;
+// }
+
+.stack-\.25,
+.stack-0\.25 {
+  & > * + * {
+    margin-top: 0.25rem;
+  }
+}
+
+.stack-\.5,
+.stack-0\.5 {
+  & > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+.stack-\.75,
+.stack-0\.75 {
+  & > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+.stack-1 > * + * {
+  margin-top: 1rem;
+}
+
+.stack-1\.25 > * + * {
+  margin-top: 1.25rem;
+}
+
+.stack-1\.5 > * + * {
+  margin-top: 1.5rem;
+}
+
+.stack-1\.75 > * + * {
+  margin-top: 1.75rem;
+}
+
+.stack-2 > * + * {
+  margin-top: 2rem;
+}
+
+.stack-2\.25 > * + * {
+  margin-top: 2.25rem;
+}
+
+.stack-2\.5 > * + * {
+  margin-top: 2.5rem;
+}
+
+.stack-2\.75 > * + * {
+  margin-top: 2.75rem;
+}
+
+.stack-3 > * + * {
+  margin-top: 3rem;
+}

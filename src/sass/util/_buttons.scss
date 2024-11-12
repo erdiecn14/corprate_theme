@@ -1,0 +1,130 @@
+%button {
+  --link-decor: none;
+  color: var(--button-color);
+  background: var(--button-fill);
+  border-bottom: solid 2px var(--button-border-color);
+  border-radius: var(--round);
+  display: var(--button-display);
+  padding: var(--button-padding);
+  font-family: var(--FONT-ACCENT-STACK);
+  font-size: var(--button-font-size);
+  font-weight: 700;
+  letter-spacing: 0.1ch;
+  text-align: center;
+  text-transform: uppercase;
+  // text-decoration: none;
+  transition: ease-in-out 0.2s;
+
+  position: relative;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-position: center 99%;
+    color: var(--button-color-hover);
+    background-color: var(--COLOR-1);
+    // border-color: var(--button-border-color-hover);
+    border-bottom: 2px solid var(--COLOR-3);
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+
+    svg {
+      fill: white;
+    }
+  }
+}
+
+
+.button--1 {
+  @extend %button;
+  --button-fill: var(--COLOR-1);
+  --button-color: white;
+  --button-border-color: var(--COLOR-3);
+
+  svg {
+    fill: white !important;
+  }
+
+  &:hover, 
+  &:focus {
+    background-color: var(--COLOR-8) !important;
+    color: var(--COLOR-1) !important; 
+    svg{
+      fill: var(--COLOR-1) !important;
+    }
+  }
+}
+
+.button--2 {
+  @extend %button;
+  --button-fill: #{$color-2};
+  --button-color: var(--COLOR-1);
+  --button-border-color: var(--COLOR-2);
+  // --button-font-size: var(--FS1);
+}
+
+.button--3 {
+  @extend %button;
+  --button-fill: #{$color-3};
+  --button-color: white;
+}
+
+.button--4 {
+  @extend %button;
+  --button-fill: var(--COLOR-4);
+  --button-color: white;
+  --button-border-color: var(--COLOR-4);
+}
+
+.button--5 {
+  @extend %button;
+  --button-fill: var(--COLOR-5);
+  --button-color: white;
+  --button-border-color: var(--COLOR-5);
+}
+
+.button--6 {
+  @extend %button;
+  --button-fill: white;
+  --button-color: var(--COLOR-1);
+  --button-border-color: var(--COLOR-1);
+}
+
+.button--w {
+  --button-fill: white;
+  --button-color: var(--COLOR-1);
+  border-bottom: solid 2px var(--button-border-color);
+
+  &:focus,
+  &:hover {
+    background-color: var(--COLOR-7);
+    color: white;
+    svg {
+      fill: white;
+    }
+  }
+
+}
+
+.pseudo-cta {
+  @extend %button;
+  pointer-events: none;
+  transition: ease-in-out 0.2s;
+  &:hover {
+    transform: none;
+  }
+}
+
+.cta svg {
+  fill: var(--COLOR-1);
+}
+
+.bg-1 .cta {
+  background-color: var(--COLOR-8);
+}
+
+.bg-1 .cta:hover,
+.bg-1 .cta:focus {
+  background-color: var(--COLOR-7);
+  color: white;
+}

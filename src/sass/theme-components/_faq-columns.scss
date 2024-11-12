@@ -1,0 +1,44 @@
+.faq-column-container {
+  --col-gutter: var(--PAD2);
+  --container-threshold: #{$remq-lg};
+  @extend .columns;
+  
+  @include mx-desktop {
+    --col-gutter: .5rem;
+  }
+}
+
+.faq-column {
+  @extend %togglize-container;
+  > %headings {
+    --all-heading-font-size: var(--FS1);
+    max-width: 100%;
+  }
+  button {
+    max-width: 100%;
+  }
+}
+
+// style toggle buttons like CTAs instead of using the lines
+.faq-column button.togglize-button {
+  border-radius: var(--round);
+  background: var(--button-fill);
+  color: var(--button-color);
+  padding: 1rem;
+  text-transform: none;
+  &:after,
+  &:before {
+    content: none;
+  }
+}
+
+.faq-column .togglize-button svg.expand-icon--plus-minus {
+  fill: var(--button-color);
+}
+
+.faq-column .expandable {
+  // padding-left: 1rem;
+  // padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

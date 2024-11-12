@@ -1,0 +1,4 @@
+.page-section--framed {
+  $box-shadow-size : 20px;
+  padding-bottom: calc(var(--PAD2) + #{$box-shadow-size});
+}

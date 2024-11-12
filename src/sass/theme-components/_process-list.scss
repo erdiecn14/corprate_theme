@@ -1,0 +1,87 @@
+ol.process-list {
+  --list-case: normal;
+  --all-heading-font-size: var(--FS1);
+  list-style-type: none;
+  counter-reset: listCounter;
+  padding: 0;
+  margin-top: var(--PAD0);
+}
+
+ol.process-list  li {
+  position: relative;
+  display: flex;
+  gap: var(--PAD2);
+  flex-wrap: wrap;
+  padding-bottom: var(--PAD0);
+  
+  &:before {
+    /* styles for the number */
+    content: counter(listCounter, decimal-leading-zero) " ";
+    color: var(--step-color);
+    font-family: var(--FONT-SANS-STACK-2);
+    counter-increment: listCounter;
+    font-size: var(--FS7);
+    // line-height: .8;
+    line-height: 1;
+  }
+  
+  &:after {
+    content: '';
+    background: var(--step-color);
+    height: 5px;
+    border-radius: var(--round);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+ol.process-list > li > div {
+  flex-basis: 45ch;
+  flex-grow: 1;
+}
+
+ol.process-list  li + li {
+  margin-top: var(--PAD2);
+}
+
+ol.process-list { 
+
+  li:nth-child(1n) {
+    --step-color: #{$color-3};
+  }
+
+  li:nth-child(2n) {
+    --step-color: #{$color-2};
+  }
+
+  li:nth-child(3n) {
+    --step-color: #{$color-5};
+  }
+  
+  li:nth-child(4n) {
+    --step-color: #{$color-1};
+  }
+}
+  
+ol.process-list %headings {
+  margin-bottom: var(--PAD-6);
+}
+
+.step-color-1 {
+  --step-color: #{$color-1};
+}
+.step-color-2 {
+  --step-color: #{$color-2};
+}
+.step-color-3 {
+  --step-color: #{$color-3};
+}
+.step-color-4 {
+  --step-color: #{$color-4};
+}
+.step-color-5 {
+  --step-color: #{$color-5};
+}

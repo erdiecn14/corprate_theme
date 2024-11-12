@@ -1,0 +1,19 @@
+.prose table { 
+  border: solid 2px var(--COLOR-1);
+  border-collapse: collapse;
+  padding: .5rem;
+  color: var(--body-copy-color);
+  font-size: var(--FS0);
+}
+
+.prose th {
+  border: solid 2px var(--COLOR-1);
+  padding: .5rem;
+  color: var(--body-copy-color);
+}
+
+.prose td {
+  border: solid 2px var(--COLOR-1);
+  color: var(--body-copy-color);
+  padding: .5rem;
+}

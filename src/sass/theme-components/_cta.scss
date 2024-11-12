@@ -1,0 +1,26 @@
+.cta {
+  @extend %button;
+  max-width: 40ch;
+  width: fit-content;
+  --button-display: flex;
+  align-items: center;
+	
+}
+
+.cta span{
+	margin-top: 2px;
+}
+
+.cta-group {
+	--grid-item-min-width: 10rem;
+	--grid-gutter: var(--PROSE-GAP);
+	--col-gutter: 1.5rem;
+	--stacked-gap: var(--PROSE-GAP);
+	--container-threshold: 10rem;
+}
+
+.cta-group .cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
