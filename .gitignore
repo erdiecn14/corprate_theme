@@ -5,6 +5,8 @@ prod/
 dist/
 public/
 
+.eslintrc
+
 node_modules/
 vendor/
 
